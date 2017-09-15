@@ -1,0 +1,22 @@
+<% include ../common/header %>
+<% include ../common/navbar %>
+
+<div id="page-wrapper" class="container-fluid">
+    <h4><%= title %> <small><%- desc %></small></h4>
+    <div class="report-form-container well no-select">
+        <% include ../common/form_dimension %>
+
+        <div class="groupby-list <%= groupbysClass %>" style="visibility:hidden">
+            <% include ../common/form_groupby %>
+        </div>
+
+        <div class="metrics-list  <%= metricsClass %>"style="visibility: hidden">
+            <% include ../common/form_metric %>
+        </div>
+    </div>
+    <div class="report-result-container">
+        <% include ./result %>
+    </div>
+</div>
+
+<% include ../common/footer %>

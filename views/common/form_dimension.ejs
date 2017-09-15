@@ -1,0 +1,51 @@
+<script language="JavaScript" type="text/JavaScript">
+    function toggle(targetid){
+        if (document.getElementById){
+            target=document.getElementById(targetid);
+            if (target.style.display=="block"){
+                target.style.display="none";
+            } else {
+                target.style.display="block";
+            }
+        }
+    }
+</script>
+<input type="button" value="hide/show" class="btn btn-sm btn-success pull-right" onclick="toggle('div1')" />
+
+<form id="div1" class='dimensionForm form-inline'>
+    <% for (var i = 0; i < dimensions.length; i++) { %>
+    <div class="form-group <%= dimensions[i].class %>">
+
+        <dt><%= dimensions[i].label %>
+            <% if (dimensions[i].supportNot) { %>
+            <div class="checkbox pull-right">
+                <label><input type="checkbox" name="<%= dimensions[i].name %>-not"<% if (dimensions[i].supportNot.checked) { %> checked<% } %>> ∉</label>
+            </div>
+            <% } %>
+        </dt>
+
+        <% if (dimensions[i].type === 'radio') { %>
+            <div class="btn-group buttons" data-toggle="buttons">
+                <% for (var j = 0; j < dimensions[i].data.length; j++) { %>
+                    <label class="btn btn-default btn-sm <% if (dimensions[i].data[j].id === dimensions[i].defaults) { %> active <% } %>">
+                        <input type="radio" name="<%= dimensions[i].name %>" 
+                        <% if (dimensions[i].data[j].id === dimensions[i].defaults) { %> checked <% } %>
+                        value="<%= dimensions[i].data[j].id %>"><%= dimensions[i].data[j].text %>
+                    </label>
+                <% } %>
+            </div>
+        <% } else if (dimensions[i].type === 'time') { %>
+            <input type="text" class="datex form-control input-sm" name="<%= dimensions[i].name %>" data-format="<%= dimensions[i].format %>" <% if(dimensions[i].backdays) { %>data-backdays="<%= dimensions[i].backdays %>"<% } %> />
+        <% } else { %>
+            <select class="form-control input-sm dimension-select" data-label="<%= dimensions[i].label %>" name="<%= dimensions[i].name %>" data-defaults="<%= dimensions[i].defaults %>" data-options="<%= JSON.stringify(dimensions[i].data) %>" data-limit="<%= dimensions[i].limit || 0 %>" <% if(!dimensions[i].single) { %>multiple="multiple" <% } %> >
+            </select>
+        <% } %>
+    </div>
+    <% } %>
+
+    <div class="form-group pull-right">
+    <br/>
+    <button type="submit" class="btn btn-sm btn-primary"> &#9654; Query</button>
+    </div>
+
+</form>

@@ -1,0 +1,13 @@
+<form class='groupbyForm form-inline'>
+    <strong>Group By: &nbsp;</strong>
+    <div class="form-group">
+        <div class="btn-group buttons" data-toggle="buttons">
+            <% for (var i = 0; i < groupbys.length; i++) { %>
+            <label class="btn btn-default btn-sm <% if (groupbys[i].groupby_checked) { %>active<% } %>">
+                <input type="checkbox" name="groupby" value="<%= groupbys[i].name %>" <% if (groupbys[i].groupby_checked) { %>checked<% } %> data-label="<%= groupbys[i].label || '' %>" data-template="<%= groupbys[i].template || '' %>">
+                <%= groupbys[i].label %>
+            </label>
+            <% } %>
+        </div>
+    </div>
+</form>

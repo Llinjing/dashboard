@@ -1,0 +1,11 @@
+    <script>
+        window.settings=<%- settings %>;
+    </script>
+    <script src="/build/js/lib.min.js"></script>
+    <% for (var i = 0; i < js.length; i++) { %>
+        <script src="<%= js[i] %>"></script>
+    <% } %>
+
+</body>
+
+</html>

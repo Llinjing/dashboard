@@ -1,0 +1,12 @@
+<form class='metricForm form-inline'>
+	<strong>Metrics:&nbsp;&nbsp;&nbsp;</strong>
+    <div class="form-group">
+        <div class="btn-group buttons" data-toggle="buttons">
+            <% for (var i = 0; i < metrics.length; i++) { %>
+            <label class="btn btn-default btn-sm <% if (metrics[i].checked) { %>active<% } %>">
+                <input type="checkbox" name="metric" value="<%= metrics[i].name %>" <% if (metrics[i].checked) { %>checked<% } %> data-label="<%= metrics[i].label || '' %>" data-template="<%= metrics[i].template || '' %>" data-subtitle="<%= metrics[i].subtitle || '' %>"><%= metrics[i].label || metrics[i].name %>
+            </label>
+            <% } %>
+        </div>
+    </div>
+</form>

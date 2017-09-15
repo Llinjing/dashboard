@@ -1,0 +1,10 @@
+table.dataTable tbody > tr:first-child {
+    background-color: #eee;
+    font-weight: 600;
+}
+
+table.dataTable tbody td {
+    padding: 0;
+}
+
+

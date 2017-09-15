@@ -1,0 +1,41 @@
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top no-select" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"><img alt="实验报表 - Inveno" src="<%= logo %>"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse-button">
+
+            <ul class="nav navbar-nav">
+            <% for (var i = 0; i < links.length; i++) { %>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= links[i].label %></a>
+                    <ul class="dropdown-menu">
+                    <% for (var j = 0; j < links[i].lists.length; j++) { %>
+                        <li><a href="<%= links[i].lists[j].link %>"><%= links[i].lists[j].label %></a></li>
+                    <% } %>
+                    </ul>
+                </li>
+            <% } %>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <% if (userEmail) { %>
+                <li><a><%= userEmail %></a></li>
+                <li><a href="/logout">Logout</a></li>
+                <% } %>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>

@@ -1,0 +1,38 @@
+{
+  "name": "ContentDashboard",
+  "description": "Inveno Content Dashboard",
+  "version": "0.0.1",
+  "main": "server.js",
+  "private": true,
+  "contributors": [
+    {
+      "name": "Inveno",
+      "email": ""
+    }
+  ],
+  "dependencies": {
+    "async": "^1.1.0",
+    "body-parser": "~1.8.1",
+    "compression": "^1.5.0",
+    "cookie-parser": "~1.3.3",
+    "ejs": "~1.0.0",
+    "express": "~4.10.2",
+    "express-ipfilter": "0.0.20",
+    "moment": "~2.8.3",
+    "moment-timezone": "^0.4.0",
+    "morgan": "~1.3.0",
+    "serve-favicon": "~2.1.3",
+    "sprintf-js": "^1.0.3",
+    "underscore": "~1.7.0",
+    "request": "^2.67.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-uglify": "~0.5.0",
+    "grunt-contrib-concat": "~0.5.0",
+    "grunt-contrib-cssmin": "~0.10.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}

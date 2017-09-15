@@ -1,0 +1,88 @@
+{
+  "lib": {
+    "js": [
+      "app/bower_components/jquery/dist/jquery.min.js",
+      "app/bower_components/underscore/underscore-min.js",
+      "app/bower_components/moment/min/moment.min.js",
+      "app/bower_components/moment-timezone/builds/moment-timezone-with-data.min.js",
+      "app/bower_components/bootstrap/dist/js/bootstrap.min.js",
+      "app/bower_components/select2/dist/js/select2.min.js",
+      "app/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js",
+      "app/bower_components/highcharts-release/highcharts.js",
+      "app/bower_components/DataTables/media/js/jquery.dataTables.min.js",
+      "app/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js",
+      "app/bower_components/pace/pace.min.js",
+      "app/bower_components/notifyjs/dist/notify-combined.min.js"
+    ],
+    "css": [
+      "app/bower_components/bootstrap/dist/css/bootstrap.min.css",
+      "app/bower_components/select2/dist/css/select2.min.css",
+      "app/bower_components/select2-bootstrap-theme/dist/select2-bootstrap.min.css",
+      "app/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css",
+      "app/bower_components/DataTables/media/css/jquery.dataTables.min.css",
+      "app/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css",
+      "app/bower_components/pace/themes/purple/pace-theme-flash.css"
+    ]
+  },
+
+  "chart_and_table": {
+    "js": [
+      "app/scripts/common/module.js",
+      "app/scripts/common/utility.js",
+      "app/scripts/common/form.js",
+        "app/scripts/chart_and_table/table.js",
+        "app/scripts/chart_and_table/charts.js",
+        "app/scripts/chart_and_table/index.js"
+
+    ],
+    "css": [
+      "app/styles/common.css",
+      "app/styles/main.css",
+      "app/styles/chart_and_table.css"
+    ]
+  },
+  "table_only": {
+    "js": [
+      "app/scripts/common/module.js",
+      "app/scripts/common/utility.js",
+      "app/scripts/common/form.js",
+      "app/scripts/table_only/table.js",
+      "app/scripts/table_only/index.js"
+    ],
+    "css": [
+      "app/styles/common.css",
+      "app/styles/main.css"
+    ]
+  },
+  "histogram": {
+    "js": [
+      "app/scripts/common/module.js",
+      "app/scripts/common/utility.js",
+      "app/scripts/common/form.js",
+        "app/scripts/histogram/table.js",
+        "app/scripts/histogram/charts.js",
+        "app/scripts/histogram/index.js"
+
+    ],
+    "css": [
+      "app/styles/common.css",
+      "app/styles/main.css"
+    ]
+  }
+    ,
+    "page_detail": {
+        "js": [
+            "app/scripts/common/module.js",
+            "app/scripts/common/utility.js",
+            "app/scripts/common/form.js",
+            "app/scripts/common/detail_form.js",
+            "app/scripts/page_detail/table.js",
+            "app/scripts/page_detail/index.js"
+        ],
+        "css": [
+            "app/styles/common.css",
+            "app/styles/main.css"
+        ]
+    }
+
+}
