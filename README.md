@@ -1,12 +1,9 @@
 
-<<<<<<< HEAD
+## dashboard
+dashboard是一个报表平台，主要对接druid和mysql数据。其中对接druid部分，主要为topn和timeseries查询。
 
-2017-1-6 14:50
-dashboard 接入美东
+## 使用的语言
+该系统主要使用nodejs进行服务端开发，前端使用的ejs
 
-2017-1-16 14:00
-下线LTV1.0 http://52.220.8.80:8182/report/index_user_ltv
-=======
-### 2017-9-15
-#### 提交海外dashboard代码
->>>>>>> 68402407d41a36a02b88a2e98a7db43300466ea8
+## 优势
+该系统添加新的页面功能比较简单，只需配置JSON文件即可。同时页面渲染比较快。
